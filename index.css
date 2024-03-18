@@ -80,6 +80,14 @@
   padding: 10px;
   border-radius: 30px;
   color: white;
+  border: solid blueviolet 1px;
+}
+
+.categories p:hover {
+  background-color: white;
+  color: blueviolet;
+  transition: 1s;
+  border: solid blueviolet 1px;
 }
 
 .recommend {
@@ -163,10 +171,25 @@
 
 .sale_image__offer {
   position: absolute;
-  width: 35%;
+  width: 38%;
   border: solid black 1px;
   padding: 2%;
   background-color: white;
   top: 10%;
   left: 10%;
+  animation-name: zoom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
